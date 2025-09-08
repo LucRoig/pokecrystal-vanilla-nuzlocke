@@ -1,3 +1,3 @@
-# Pokémon Crystal Vanilla Nuzlocke [![Build Status][ci-badge]][ci]
+# Pokémon Crystal Vanilla Nuzlocke
 
 My personal take on pokecrystal for a vanilla nuzlocke run.
