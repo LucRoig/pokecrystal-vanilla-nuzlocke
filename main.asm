@@ -690,5 +690,6 @@ SECTION "Stadium 2 Checksums", ROMX[$7DE0], BANK[$7F]
 ; Pokémon Stadium Gold and Silver was the third Stadium release for N64.)
 ; This SECTION reserves space for those checksums.
 ; If it is removed, also remove the "tools/stadium" command in the Makefile.
+; INITIAL COMMIT LUCGR
 
 	ds $220
