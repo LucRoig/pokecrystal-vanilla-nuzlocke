@@ -51,6 +51,7 @@ PlayersHousePosterScript:
 
 PlayersHouseRadioScript:
 	setflag ENGINE_FOGBADGE
+	setflag ENGINE_MINERALBADGE
 	giveitem HM_SURF
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue .NormalRadio
