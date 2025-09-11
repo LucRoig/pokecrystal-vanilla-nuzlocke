@@ -153,10 +153,12 @@ CheckSubstatusCantRun: ; unreferenced
 	ret
 
 AI_TryItem:
-	; items are not allowed in the Battle Tower
-	ld a, [wInBattleTowerBattle]
-	and a
-	ret nz
+	; Items not allowed anywere
+	ret
+	; Items are not allowed in the Battle Tower 
+	;ld a, [wInBattleTowerBattle]
+	;and a
+	;ret nz
 
 	ld a, [wEnemyTrainerItem1]
 	ld b, a
