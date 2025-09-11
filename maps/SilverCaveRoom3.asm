@@ -26,6 +26,7 @@ Red:
 	special FadeOutToBlack
 	special ReloadSpritesNoPalettes
 	disappear SILVERCAVEROOM3_RED
+	loadmem wLevelCap, 100
 	pause 15
 	special FadeInFromBlack
 	pause 30
@@ -45,7 +46,15 @@ RedWinLossText:
 
 RedLeavesText:
 	text "<……>"
-	line "<……>"
+	line "A true master."
+
+	para "You can now"
+	line "train #MON"
+	cont "of any level."
+
+	para "<……>"
+	line "Good luck on"
+	cont "travels."
 	done
 
 SilverCaveRoom3_MapEvents:

@@ -159,6 +159,7 @@ DragonShrineTakeTestScript:
 	writetext DragonShrineHereRisingBadgeText
 	waitbutton
 	setflag ENGINE_RISINGBADGE
+	loadmem wLevelCap, 47
 	playsound SFX_GET_BADGE
 	waitsfx
 	special RestartMapMusic
@@ -637,9 +638,14 @@ DragonShrineRisingBadgeExplanationText:
 	text "RISINGBADGE will"
 	line "enable your"
 
-	para "#MON to use the"
-	line "move for climbing"
-	cont "waterfalls."
+	para "#MON to reach"
+	line "L47."
+
+	para "It also allows"
+	line "#MON to use the"
+
+	para "move for climbing"
+	line "waterfalls."
 
 	para "Also, all #MON"
 	line "will recognize you"

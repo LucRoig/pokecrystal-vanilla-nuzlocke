@@ -30,6 +30,7 @@ VioletGymFalknerScript:
 	readvar VAR_BADGES
 	scall VioletGymActivateRockets
 .FightDone:
+	loadmem wLevelCap, 16
 	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
@@ -158,6 +159,10 @@ FalknerZephyrBadgeText:
 
 	para "FLASH, if they"
 	line "have it, anytime."
+
+	para "It also allows"
+	line "pokemon to grow"
+	cont "up to L16."
 
 	para "Here--take this"
 	line "too."

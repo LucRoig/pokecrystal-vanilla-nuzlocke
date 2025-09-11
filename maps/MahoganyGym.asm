@@ -52,7 +52,22 @@ MahoganyGymPryceScript:
 	setevent EVENT_BEAT_BOARDER_RONALD
 	setevent EVENT_BEAT_BOARDER_BRAD
 	setevent EVENT_BEAT_BOARDER_DOUGLAS
-	writetext PryceText_GlacierBadgeSpeech
+	readvar VAR_BADGES
+	ifequal 7, .PryceExplainBadge7
+	ifequal 6, .PryceExplainBadge6
+	ifequal 5, .PryceExplainBadge5
+.PryceExplainBadge7
+	loadmem wLevelCap, 40
+	writetext PryceText_GlacierBadgeSpeech7
+	sjump .FinishedExplainBadge
+.PryceExplainBadge6
+	loadmem wLevelCap, 37
+	writetext PryceText_GlacierBadgeSpeech6
+	sjump .FinishedExplainBadge
+.PryceExplainBadge5
+	loadmem wLevelCap, 34
+	writetext PryceText_GlacierBadgeSpeech5
+.FinishedExplainBadge
 	promptbutton
 	verbosegiveitem TM_ICY_WIND
 	iffalse MahoganyGym_NoRoomForIcyWind
@@ -209,8 +224,46 @@ Text_ReceivedGlacierBadge:
 	line "GLACIERBADGE."
 	done
 
-PryceText_GlacierBadgeSpeech:
-	text "This lets your"
+PryceText_GlacierBadgeSpeech5:
+	text "GLACIERBADGE makes"
+	line "it possible for"
+
+	para "your #MON to"
+	line "grow up to L34."
+	
+	para "It also lets your"
+	line "#MON use WHIRL-"
+	cont "POOL to get across"
+	cont "real whirlpools."
+
+	para "And this… This is"
+	line "a gift from me!"
+	done
+
+PryceText_GlacierBadgeSpeech6:
+	text "GLACIERBADGE makes"
+	line "it possible for"
+
+	para "your #MON to"
+	line "grow up to L37."
+	
+	para "It also lets your"
+	line "#MON use WHIRL-"
+	cont "POOL to get across"
+	cont "real whirlpools."
+
+	para "And this… This is"
+	line "a gift from me!"
+	done
+
+PryceText_GlacierBadgeSpeech7:
+	text "GLACIERBADGE makes"
+	line "it possible for"
+
+	para "your #MON to"
+	line "grow up to L40."
+	
+	para "It also lets your"
 	line "#MON use WHIRL-"
 	cont "POOL to get across"
 	cont "real whirlpools."

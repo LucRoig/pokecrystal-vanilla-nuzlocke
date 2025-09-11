@@ -45,6 +45,7 @@ EcruteakGymMortyScript:
 	setevent EVENT_RANG_CLEAR_BELL_1
 	setevent EVENT_RANG_CLEAR_BELL_2
 .FightDone:
+	loadmem wLevelCap, 30
 	checkevent EVENT_GOT_TM30_SHADOW_BALL
 	iftrue .GotShadowBall
 	setevent EVENT_BEAT_SAGE_JEFFREY
@@ -233,10 +234,10 @@ Text_ReceivedFogBadge:
 
 MortyText_FogBadgeSpeech:
 	text "By having FOG-"
-	line "BADGE, #MON up"
+	line "BADGE, you can"
 
-	para "to L50 will obey"
-	line "you."
+	para "raise #MON"
+	line "up to L30."
 
 	para "Also, #MON that"
 	line "know SURF will be"

@@ -42,7 +42,22 @@ OlivineGymJasmineScript:
 .FightDone:
 	checkevent EVENT_GOT_TM23_IRON_TAIL
 	iftrue .GotIronTail
-	writetext Jasmine_BadgeSpeech
+	readvar VAR_BADGES
+	ifequal 7, .JasmineExplainBadge7
+	ifequal 6, .JasmineExplainBadge6
+	ifequal 5, .JasmineExplainBadge5
+.JasmineExplainBadge7
+	loadmem wLevelCap, 40
+	writetext Jasmine_BadgeSpeech7
+	sjump .FinishedExplainBadge
+.JasmineExplainBadge6
+	loadmem wLevelCap, 37
+	writetext Jasmine_BadgeSpeech6
+	sjump .FinishedExplainBadge
+.JasmineExplainBadge5
+	loadmem wLevelCap, 34
+	writetext Jasmine_BadgeSpeech5
+.FinishedExplainBadge
 	promptbutton
 	verbosegiveitem TM_IRON_TAIL
 	iffalse .NoRoomForIronTail
@@ -148,8 +163,36 @@ Text_ReceivedMineralBadge:
 	line "MINERALBADGE."
 	done
 
-Jasmine_BadgeSpeech:
-	text "…Um… Please take"
+Jasmine_BadgeSpeech5:
+	text "…Now that you have"
+	line "MINERALBADGE you"
+
+	para "can train #MON"
+	line "up to L34…"
+
+	para "…Um… Please take"
+	line "this TM…"
+	done
+
+Jasmine_BadgeSpeech6:
+	text "…Now that you have"
+	line "MINERALBADGE you"
+
+	para "can train #MON"
+	line "up to L37…"
+
+	para "…Um… Please take"
+	line "this TM…"
+	done
+
+Jasmine_BadgeSpeech7:
+	text "…Now that you have"
+	line "MINERALBADGE you"
+
+	para "can train #MON"
+	line "up to L40…"
+
+	para "…Um… Please take"
 	line "this TM…"
 	done
 

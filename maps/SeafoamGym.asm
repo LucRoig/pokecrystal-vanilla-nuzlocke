@@ -32,6 +32,7 @@ SeafoamGymBlaineScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_VOLCANOBADGE
+	loadmem wLevelCap, 58
 	writetext BlaineAfterBattleText
 	waitbutton
 	closetext
@@ -102,7 +103,14 @@ ReceivedVolcanoBadgeText:
 	done
 
 BlaineAfterBattleText:
-	text "BLAINE: I did lose"
+	text "BLAINE: With"
+	line "VOLCANOBADGE"
+
+	para "your #MON will"
+	line "be able to grow"
+	cont "up to L58."
+	
+	para "BLAINE: I did lose"
 	line "this time, but I'm"
 
 	para "going to win the"

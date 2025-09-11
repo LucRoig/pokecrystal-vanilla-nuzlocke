@@ -39,6 +39,7 @@ GoldenrodGymWhitneyScript:
 	setevent EVENT_BEAT_LASS_CARRIE
 	setevent EVENT_BEAT_LASS_BRIDGET
 .FightDone:
+	loadmem wLevelCap, 25
 	opentext
 	checkevent EVENT_MADE_WHITNEY_CRY
 	iffalse .StoppedCrying
@@ -239,6 +240,10 @@ WhitneyPlainBadgeText:
 
 	para "STRENGTH outside"
 	line "of battle."
+
+	para "Also, you can"
+	line "now train"
+	cont "#MON up to L25."
 
 	para "Oh, you can have"
 	line "this too!"

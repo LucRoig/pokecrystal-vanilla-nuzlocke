@@ -25,6 +25,7 @@ ViridianGymBlueScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_EARTHBADGE
+	loadmem wLevelCap, 88
 	writetext LeaderBlueAfterText
 	waitbutton
 	closetext
@@ -120,6 +121,13 @@ LeaderBlueAfterText:
 
 	para "real deal. You are"
 	line "a good trainer."
+
+	para "Now that you have"
+	line "EARTHBADGE"
+
+	para "you can train"
+	line "your #MON"
+	cont "up to L88."
 
 	para "But I'm going to"
 	line "beat you someday."

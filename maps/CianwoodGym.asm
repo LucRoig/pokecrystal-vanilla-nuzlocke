@@ -68,7 +68,22 @@ CianwoodGymChuckScript:
 	setevent EVENT_BEAT_BLACKBELT_LAO
 	setevent EVENT_BEAT_BLACKBELT_NOB
 	setevent EVENT_BEAT_BLACKBELT_LUNG
-	writetext ChuckExplainBadgeText
+	readvar VAR_BADGES
+	ifequal 7, .ChuckExplainBadge7
+	ifequal 6, .ChuckExplainBadge6
+	ifequal 5, .ChuckExplainBadge5
+.ChuckExplainBadge7
+	loadmem wLevelCap, 40
+	writetext ChuckExplainBadge7Text
+	sjump .FinishedExplainBadge
+.ChuckExplainBadge6
+	loadmem wLevelCap, 37
+	writetext ChuckExplainBadge6Text
+	sjump .FinishedExplainBadge
+.ChuckExplainBadge5
+	loadmem wLevelCap, 34
+	writetext ChuckExplainBadge5Text
+.FinishedExplainBadge
 	promptbutton
 	verbosegiveitem TM_DYNAMICPUNCH
 	iffalse .BagFull
@@ -210,12 +225,46 @@ GetStormBadgeText:
 	line "STORMBADGE."
 	done
 
-ChuckExplainBadgeText:
+ChuckExplainBadge5Text:
 	text "STORMBADGE makes"
-	line "all #MON up to"
+	line "possible for"
 
-	para "L70 obey, even"
-	line "traded ones."
+	para "#MON to improve"
+	line "up to L34."
+
+	para "It also lets your"
+	line "#MON use FLY"
+
+	para "when you're not in"
+	line "a battle."
+
+	para "Here, take this"
+	line "too!"
+	done
+
+ChuckExplainBadge6Text:
+	text "STORMBADGE makes"
+	line "possible for"
+
+	para "#MON to improve"
+	line "up to L37."
+
+	para "It also lets your"
+	line "#MON use FLY"
+
+	para "when you're not in"
+	line "a battle."
+
+	para "Here, take this"
+	line "too!"
+	done
+
+ChuckExplainBadge7Text:
+	text "STORMBADGE makes"
+	line "possible for"
+
+	para "#MON to improve"
+	line "up to L40."
 
 	para "It also lets your"
 	line "#MON use FLY"
