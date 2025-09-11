@@ -50,12 +50,13 @@ PlayersHousePosterScript:
 	describedecoration DECODESC_POSTER
 
 PlayersHouseRadioScript:
+	setflag ENGINE_ZEPHYRBADGE
+	setflag ENGINE_HIVEBADGE
+	setflag ENGINE_PLAINBADGE
 	setflag ENGINE_FOGBADGE
-	giveitem HM_SURF
+	setflag ENGINE_STORMBADGE
 	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_RISINGBADGE
+
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue .NormalRadio
 	checkevent EVENT_LISTENED_TO_INITIAL_RADIO
